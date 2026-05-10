@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- Revoke button — always visible on every tab -->
+    <Button
+        android:id="@+id/btnRevokePermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="6dp"
+        android:text="Grant / Revoke Permissions"
+        android:backgroundTint="#D32F2F"
+        android:textColor="#FFFFFF" />
+
+    <!-- Accounts tab only (position 3) — shown programmatically -->
+    <Button
+        android:id="@+id/btnPickAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="Pick Hidden Account"
+        android:visibility="gone" />
+
+    <!-- Bluetooth tab only (position 2) — label toggles between
+         "Scan Nearby Devices" and "Stop Scan" at runtime -->
+    <Button
+        android:id="@+id/btnBtScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Scan Nearby Devices"
+        android:backgroundTint="#1565C0"
+        android:textColor="#FFFFFF"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textIsSelectable="true" />
+
+    </ScrollView>
+
+</LinearLayout>

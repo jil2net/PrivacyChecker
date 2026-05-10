@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Top Status Summary -->
+    <LinearLayout
+        android:id="@+id/statusHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/txtQuickStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checking..."
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#29402D"/>
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusHeader"
+        android:background="#FFFFFF"
+        app:tabIndicatorColor="#6ceb80"
+        app:tabSelectedTextColor="#29402D"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnCheck"
+        android:layout_below="@id/tabLayout" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:text="Grant/Update"
+        android:textSize="20sp"
+        android:textColor="#29402D"
+        android:textStyle="bold"
+        app:backgroundTint="#6ceb80"/>
+
+</RelativeLayout>
